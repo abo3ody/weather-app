@@ -1,13 +1,42 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+html {
+   font-size: 62.5%;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+   font-family: "montseratt", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+   background: url("./assets/images/day-desktop.jpg") center center no-repeat;
+   background-size: cover;
+   transition: 0.4s ease-out;
+   background-color: rgba(50, 50, 70, 0.5);
+   /* height: 100vh; */
+}
+.app.night {
+   background-image: url("./assets/images/night-desktop.jpg");
+}
+main {
+   min-height: 100vh;
+   background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.75)
+   );
+   padding: 2.5rem;
+}
+
+@media screen and (max-width: 568px) {
+   .app {
+      background: url("./assets/images/day-mobile.jpg") center center no-repeat;
+      background-size: cover;
+   }
+   .app.night {
+      background-image: url("./assets/images/night-mobile.jpg");
+      background-size: cover;
+   }
 }
